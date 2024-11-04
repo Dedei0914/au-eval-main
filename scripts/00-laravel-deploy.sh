@@ -3,8 +3,11 @@ echo "Running composer"
 composer global require hirak/prestissimo
 composer install --no-dev --working-dir=/var/www/html
 composer self-update --update-keys
+composer clear-cache
+composer require symfony/error-handler
+composer update
 
-echo "generating application key..."
+##echo "generating application key..."
 ##php artisan key:generate --show
 
 echo "Caching config..."
